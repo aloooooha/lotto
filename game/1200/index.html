@@ -131,15 +131,17 @@
                 color: #d43301;
             }
             
-            table {
-                @media (max-width:767px) {
-                    .hide-on-mobile {
-                        display: none;
-                    }          
-                    .lotto-ball-1 {
+            @media (max-width:767px) {
+                .lotto-ball-1 {
                         width: 20px;
                         font-size: 1rem;
                     }          
+                table {
+                
+                    .hide-on-mobile {
+                        display: none;
+                    }          
+                    
                     @each $index, $width in (1: 20px, 2: 20px, 3: 20px, 4: 20px, 5: 20px) {
                         .lotto-ball-#{$index} {
                             width: $width;
