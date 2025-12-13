@@ -31,7 +31,7 @@
     cursor: pointer; /* 마우스 오버 시 손가락 모양으로 변경하여 클릭 가능함을 표시 */
 }
 
-.year-num {
+.pension-num {
     width: auto;
     font-weight: 400;    
     font-size: 2rem;
@@ -39,20 +39,17 @@
 
 @media (max-width:767px) {               
     .lotto-num {
-            width: auto;
-            font-size: 2rem;
-        }
+        width: auto;
+        font-size: 2rem;        
+    }
     table {
     
         .hide-on-mobile {
             display: none;
         }
     }
-    .lotto-num {
+    .pension-num {
         width: auto;
-        font-weight: 700;
-        margin: 2px;
-        font-size: 1.5rem;
-        border-radius: 0%;
+        font-size: 1.5rem;        
     }
 }
