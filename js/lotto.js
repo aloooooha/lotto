@@ -65,7 +65,7 @@ new DataTable('#example', {
                 //if (type === 'display') {
                     // 'data' is the value of the current cell
                     // 'row' is the full data object for the current row
-                    return '<a href="https://lottokay/lotto/game/' + row[0] + '">' + row[0] + '</a>';
+                    return '<a href="https://lottokay.com/lotto/game/' + row[0] + '">' + row[0] + '</a>';
                 //}
                 //return data;
             }
