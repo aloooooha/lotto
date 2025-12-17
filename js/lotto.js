@@ -42,15 +42,32 @@ function changeDepth1() {
     var depth1Select = document.getElementById("depth1");
     var depth2Select = document.getElementById("depth2");
 
-    for(let i=0 ; i<depth2Select.options.length ; i++) {
-        depth2Select.remove(i);
+    depth2Select.innerHTML = '';
+
+    var depth1Value = depth1Select[depth1Select.selectedIndex].value;    
+
+    for (let i=depth2Range[depth1Value][1] ; i>= depth2Range[depth1Value][0] ; i--) {
+        depth2Select.add(new Option(i+"회", i));
     }
-
-    var depth1Value = depth1Select[depth1Select.selectedIndex].value;
-    
-
-    for (let i=depth2Range[depth1Value][0] ; i<= depth2Range[depth1Value][1] ; i++) {
-        //depth2Select.add(new Option(i, i+"회차"));
-    }
-
 }
+
+var dataSet = [];
+
+for (let i=1 ; i<=1201 ; i++) {
+    dataSet.push([i, i+" 회"]);
+}
+
+
+new DataTable('#example', {
+    columns: [
+        { title: 'No' },
+        { title: '게임 회차 바로가기' },        
+    ],
+    columnDefs: [{
+        target: 0,
+        visible: false
+    }],
+    order: [[1,'desc']],
+    lengthChange: false,
+    data: dataSet
+});
