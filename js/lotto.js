@@ -69,24 +69,12 @@ new DataTable('#example', {
                 //}
                 //return data;
             }
-        },
-        // {
-            
-        //     data: 'displayedColumnName',
-        //     render: function (data, type, row, meta) {
-        //         //if (type === 'display') {
-        //             // 'data' is the value of the current cell
-        //             // 'row' is the full data object for the current row
-        //             return '<a href="https://lottokay/lotto/game/' + row.id + '">' + data + '</a>';
-        //         //}
-        //         //return data;
-        //     }
-        // }        
+        }
     ],
-    // columnDefs: [{
-    //     target: 0,
-    //     visible: false
-    // }],
+    columnDefs: [{
+        target: [0,1],
+        className: "dt-center"
+    }],
     order: [[1,'desc']],
     lengthChange: false,
     data: dataSet
