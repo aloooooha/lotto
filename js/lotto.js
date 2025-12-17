@@ -60,23 +60,14 @@ for (let i=1 ; i<=1201 ; i++) {
 new DataTable('#example', {
     columns: [
         { title: 'No' },
-        { title: '게임 회차 바로가기',
-            render: function (data, type, row, meta) {
-                //if (type === 'display') {
-                    // 'data' is the value of the current cell
-                    // 'row' is the full data object for the current row
-                    return '<a href="https://lottokay/lotto/game/' + row[1] + '">' + data + '</a>';
-                //}
-                //return data;
-            }
-        },
+        { title: '게임 회차'},
         {
-            data: 'displayedColumnName',
+            title: '바로가기',
             render: function (data, type, row, meta) {
                 //if (type === 'display') {
                     // 'data' is the value of the current cell
                     // 'row' is the full data object for the current row
-                    return '<a href="https://lottokay/lotto/game/' + row.id + '">' + data + '</a>';
+                    return '<a href="https://lottokay/lotto/game/' + row[0] + '">' + 바로가기 + '</a>';
                 //}
                 //return data;
             }
